@@ -10,7 +10,7 @@ export const Title = styled.h1`
 
 export const Subtitle = styled.h2`
   font-family: "Ubuntu", sans-serif;
-  font-size: 22px;
+  font-size: 50px;
   color: #3a485d;
   font-weight: 600;
   margin: 0;
@@ -22,6 +22,15 @@ export const Text = styled.p`
   color: #a1aeb7;
   font-weight: 300;
   line-height: 2.2em;
+  ${props =>
+    props.large &&
+    css`
+      font-size: 22px;
+      color: #3a485d;
+      font-weight: 600;
+      margin: 0;
+      line-height: 1em;
+    `};
 `;
 
 export const Column = styled.div`
@@ -64,5 +73,17 @@ export const Button = styled.button`
     props.nav &&
     css`
       margin-right: 1.5em;
+    `};
+  ${props =>
+    props.primary &&
+    css`
+      background: #00b2aa;
+      width: 165px;
+      height: 45px;
+      border: 1px solid transparent;
+      color: #fff;
+      &:hover {
+        background-color: #00d4ca;
+      }
     `};
 `;

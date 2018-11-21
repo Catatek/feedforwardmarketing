@@ -1,11 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { Column, Title, Text, Subtitle } from "../../theme/index";
+import { Column, Title, Text, Button } from "../../theme/index";
 import splashImg from "../../assets/splash.svg";
 
 const Wrapper = styled.div`
-  min-height: 90vh;
-  height: 100%;
+  height: 100vh;
   background: #fff;
   background-position: center;
   background-size: cover;
@@ -30,7 +29,7 @@ const StyledColumn = styled(Column)`
 `;
 
 const Img = styled.img`
-  width: 90%;
+  width: 100%;
 `;
 
 export default function Splash() {
@@ -40,16 +39,16 @@ export default function Splash() {
         <Img src={splashImg} alt="Splash Img" />
       </StyledColumn>
       <StyledColumn>
-        <Subtitle>FeedForward, a teaching tool for medical education</Subtitle>
+        <Text large>FeedForward, a teaching tool for medical education</Text>
         <Title>Effective, Efficient Evaluations</Title>
         <div style={{ width: "90%" }}>
           <Text header>
-            Strengthen Your Community. Create Unlimited Opportunity. Connect-IT
-            360 is a non-profit teaching our youth the essential building blocks
-            to being successful in life. We bridge the gap between our youth and
-            the business world to guide them through disruption and
-            transformation.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
           </Text>
+          <Button primary>Get started</Button>
         </div>
       </StyledColumn>
     </Wrapper>
