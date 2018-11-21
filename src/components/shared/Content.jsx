@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Column, Text, Subtitle } from "../../theme/index";
 
 const Wrapper = styled.div`
-  min-height: 600px;
+  min-height: 500px;
   width: 100%;
   display: flex;
   flex-direction: column;

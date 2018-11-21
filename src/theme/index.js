@@ -31,6 +31,11 @@ export const Text = styled.p`
       margin: 0;
       line-height: 1em;
     `};
+  ${props =>
+    props.index &&
+    css`
+      line-height: 1em;
+    `};
 `;
 
 export const Column = styled.div`
@@ -73,6 +78,14 @@ export const Button = styled.button`
     props.nav &&
     css`
       margin-right: 1.5em;
+      background: #00b2aa;
+      width: 165px;
+      height: 45px;
+      border: 1px solid transparent;
+      color: #fff;
+      &:hover {
+        background-color: #00d4ca;
+      }
     `};
   ${props =>
     props.primary &&

@@ -4,14 +4,15 @@ import { Column, Title, Text, Button } from "../../theme/index";
 import splashImg from "../../assets/splash.svg";
 
 const Wrapper = styled.div`
-  height: 100vh;
-  background: #fff;
+  height: 85vh;
+  background: #f2f5f7;
   background-position: center;
   background-size: cover;
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
+  bottom: 0;
   justify-content: center;
   @media (max-width: 700px) {
     height: 100%;

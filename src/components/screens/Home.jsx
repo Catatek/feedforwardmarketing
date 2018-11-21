@@ -2,6 +2,7 @@ import React from "react";
 import Splash from "../shared/Splash";
 import Navigation from "../shared/Navigation";
 import Content from "../shared/Content";
+import Benefits from "../shared/Benefits";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <Navigation />
       <Splash />
       <Content />
+      <Benefits />
     </div>
   );
 }

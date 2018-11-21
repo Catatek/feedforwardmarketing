@@ -9,8 +9,11 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0px;
   background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 `;
 
 const Img = styled.img`
