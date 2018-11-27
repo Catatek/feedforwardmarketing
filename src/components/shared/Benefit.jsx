@@ -5,7 +5,7 @@ import { Column, Text, Button } from "../../theme/index";
 const Wrapper = styled.div`
   display: flex;
   height: 100%;
-  min-height: 580px;
+  min-height: 500px;
   width: 90%;
   align-items: center;
   margin: 0 auto;
