@@ -40,7 +40,9 @@ export default function Footer() {
         </Row>
       </Row>
       <Row>
-        <Text footer>2018 &copy; Feed Forward</Text>
+        <Text footer>
+          2018 &copy; Feed Forward | Made with &hearts; in Tampa, FL
+        </Text>
       </Row>
     </Wrapper>
   );

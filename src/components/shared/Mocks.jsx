@@ -24,6 +24,11 @@ const StyledBox = styled.div`
   border-radius: 3px;
   cursor: pointer;
   transition: 750ms;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   &:hover {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   }

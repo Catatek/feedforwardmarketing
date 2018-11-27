@@ -33,13 +33,13 @@ const StyledColumn = styled(Column)`
 const features = [
   {
     icon: "fal fa-clipboard-list-check",
-    title: "Specialities",
+    title: "Select your speciality",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
   },
   {
     icon: "fal fa-clipboard-list-check",
-    title: "To-Do List",
+    title: "To-do list",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
   },
@@ -57,13 +57,13 @@ const features = [
   },
   {
     icon: "fal fa-clipboard-list-check",
-    title: "Assign",
+    title: "Request reviews",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
   },
   {
     icon: "fal fa-clipboard-list-check",
-    title: "Analytics",
+    title: "View reviews",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
   }
