@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { NavLink } from "react-router-dom";
 
 export const Title = styled.h1`
   font-family: "Ubuntu", sans-serif;
@@ -49,6 +50,27 @@ export const Text = styled.p`
     css`
       font-size: 14px;
     `};
+  ${props =>
+    props.footer &&
+    css`
+      font-size: 16px;
+      margin-left: 3em;
+      color: #fff;
+    `};
+`;
+
+export const StyledNavLink = styled(NavLink)`
+  font-size: 16px;
+  font-family: "Ubuntu", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  list-style: none;
+  color: ${props => (props.footer ? "#fff" : "#3a485d")};
+  font-weight: 600;
+  margin-right: 3em;
+  @media (max-width: 1100px) {
+    font-size: 1.2em;
+  }
 `;
 
 export const Column = styled.div`
@@ -64,6 +86,7 @@ export const Row = styled.div`
   display: flex;
   width: ${props => props.width};
   margin: ${props => props.margin};
+  padding: ${props => props.padding};
   justify-content: ${props => props.justifycontent};
   align-items: ${props => props.alignitems};
 `;
