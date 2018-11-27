@@ -32,7 +32,7 @@ const StyledColumn = styled(Column)`
 
 const features = [
   {
-    icon: "fal fa-clipboard-list-check",
+    icon: "fal fa-user-md",
     title: "Select your speciality",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
@@ -44,26 +44,26 @@ const features = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
   },
   {
-    icon: "fal fa-clipboard-list-check",
+    icon: "fal fa-handshake-alt",
     title: "Collaborate",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
   },
   {
-    icon: "fal fa-clipboard-list-check",
+    icon: "fal fa-tachometer-alt",
     title: "Admin Dashboard",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
   },
   {
-    icon: "fal fa-clipboard-list-check",
+    icon: "fal fa-star",
     title: "Request reviews",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
   },
   {
-    icon: "fal fa-clipboard-list-check",
-    title: "View reviews",
+    icon: "fal fa-bell",
+    title: "Notifications",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
   }
