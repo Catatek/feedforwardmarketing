@@ -36,6 +36,19 @@ export const Text = styled.p`
     css`
       line-height: 1em;
     `};
+  ${props =>
+    props.boxtitle &&
+    css`
+      color: #505d68;
+      font-size: 16px;
+      line-height: 1em;
+      margin: 1em 0 0 0;
+    `};
+  ${props =>
+    props.boxdesc &&
+    css`
+      font-size: 14px;
+    `};
 `;
 
 export const Column = styled.div`
@@ -51,7 +64,7 @@ export const Row = styled.div`
   display: flex;
   width: ${props => props.width};
   margin: ${props => props.margin};
-  justify-content: space-evenly;
+  justify-content: ${props => props.justifycontent};
   align-items: ${props => props.alignitems};
 `;
 
