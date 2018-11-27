@@ -4,6 +4,8 @@ import Navigation from "../shared/Navigation";
 import Content from "../shared/Content";
 import Benefits from "../shared/Benefits";
 import Mocks from "../shared/Mocks";
+import Features from "../shared/Features";
+import CTA from "../shared/CTA";
 
 export default function Home() {
   return (
@@ -13,6 +15,8 @@ export default function Home() {
       <Content />
       <Benefits />
       <Mocks />
+      <Features />
+      <CTA />
     </div>
   );
 }
