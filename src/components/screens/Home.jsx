@@ -6,6 +6,7 @@ import Benefits from "../shared/Benefits";
 import Mocks from "../shared/Mocks";
 import Features from "../shared/Features";
 import CTA from "../shared/CTA";
+import Diagram from "../shared/Diagram";
 import Footer from "../shared/Footer";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <Benefits />
       <Mocks />
       <Features />
+
       <CTA />
       <Footer />
     </div>
