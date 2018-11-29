@@ -7,6 +7,11 @@ export const Title = styled.h1`
   color: #3a485d;
   font-weight: 600;
   margin: 0.25em 0;
+  ${props =>
+    props.white &&
+    css`
+      color: #fff;
+    `};
 `;
 
 export const Subtitle = styled.h2`
@@ -56,6 +61,17 @@ export const Text = styled.p`
       font-size: 16px;
       margin-left: 3em;
       color: #fff;
+    `};
+  ${props =>
+    props.white &&
+    css`
+      color: #fff;
+    `};
+  ${props =>
+    props.title &&
+    css`
+      margin: 0.5em 0;
+      line-height: 1em;
     `};
 `;
 

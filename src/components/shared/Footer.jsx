@@ -6,7 +6,7 @@ import Logo from "../../assets/logoWhite.svg";
 const Wrapper = styled.div`
   height: 125px;
   width: 100%;
-  background: #3a485d;
+  background: #546887;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

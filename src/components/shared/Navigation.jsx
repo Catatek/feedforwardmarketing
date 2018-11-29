@@ -27,6 +27,7 @@ export default function Navigation() {
       <Img src={Logo} alt="FeedForward Logo" />
       <Row alignitems="center">
         <StyledNavLink
+          exact
           to="/"
           activeStyle={{
             color: "#00b2aa"
@@ -34,7 +35,15 @@ export default function Navigation() {
         >
           Home
         </StyledNavLink>
-        <StyledNavLink to="/">About</StyledNavLink>
+        <StyledNavLink
+          exact
+          to="/about"
+          activeStyle={{
+            color: "#00b2aa"
+          }}
+        >
+          About
+        </StyledNavLink>
         <StyledNavLink to="/">Resources</StyledNavLink>
         <StyledNavLink to="/">Contact</StyledNavLink>
         <Button nav>Sign In</Button>

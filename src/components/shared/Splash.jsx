@@ -4,13 +4,12 @@ import { Column, Title, Text, Button } from "../../theme/index";
 import splashImg from "../../assets/splash.svg";
 
 const Wrapper = styled.div`
-  height: 85vh;
-  background: #f2f5f7;
+  height: 805px;
+  background: ${props => props.background};
   background-position: center;
   background-size: cover;
   width: 100%;
   display: flex;
-  flex-direction: row;
   align-items: center;
   bottom: 0;
   justify-content: center;
@@ -33,25 +32,48 @@ const Img = styled.img`
   width: 100%;
 `;
 
-export default function Splash() {
+export default function Splash({ type }) {
   return (
-    <Wrapper>
-      <StyledColumn>
-        <Img src={splashImg} alt="Splash Img" />
-      </StyledColumn>
-      <StyledColumn>
-        <Text large>FeedForward, a teaching tool for medical education</Text>
-        <Title>Effective, Efficient Evaluations</Title>
-        <div style={{ width: "90%" }}>
-          <Text header>
+    <Wrapper
+      background={
+        type === "home"
+          ? "#f2f5f7"
+          : "linear-gradient(to right, #59D2FE, #44E5E7)"
+      }
+    >
+      {type === "home" && (
+        <React.Fragment>
+          <StyledColumn>
+            <Img src={splashImg} alt="Splash Img" />
+          </StyledColumn>
+          <StyledColumn>
+            <Text large>
+              FeedForward, a teaching tool for medical education
+            </Text>
+            <Title>Effective, Efficient Evaluations</Title>
+            <div style={{ width: "90%" }}>
+              <Text header>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </Text>
+              <Button primary>Get started</Button>
+            </div>
+          </StyledColumn>
+        </React.Fragment>
+      )}
+      {type === "about" && (
+        <Column alignitems="center" textalign="center" width="60%">
+          <Title white>Feed Forward was founded upon Accountability</Title>
+          <Text white>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.
           </Text>
-          <Button primary>Get started</Button>
-        </div>
-      </StyledColumn>
+        </Column>
+      )}
     </Wrapper>
   );
 }
