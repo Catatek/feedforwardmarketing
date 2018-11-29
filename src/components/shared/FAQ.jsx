@@ -5,10 +5,10 @@ import { Column, Text, Subtitle } from "../../theme/index";
 const Wrapper = styled.div`
   width: 80%;
   display: grid;
-  grid-gap: 50px;
+  grid-gap: 80px;
   height: 100%;
   margin: 5em auto;
-  grid-template-columns: repeat(auto-fit, minmax(525px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   grid-auto-rows: 220px;
 `;
 
@@ -23,7 +23,8 @@ const StyledBox = styled(Column)`
   height: 100%;
   padding: 0.5em;
   border: 1px solid #c2d1d9;
-  border-left: 5px solid #546887;
+  border-left: 10px solid #546887;
+  border-radius: 3px;
 `;
 
 const StyledColumn = styled(Column)`
