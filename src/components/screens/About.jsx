@@ -9,19 +9,19 @@ import FAQ from "../shared/FAQ";
 const values = [
   {
     icon: "fal fa-heart",
-    title: "Lorem Ipsum",
+    title: "Impact",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
   },
   {
     icon: "fal fa-books",
-    title: "Lorem Ipsum",
+    title: "Education",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
   },
   {
     icon: "fal fa-award",
-    title: "Lorem Ipsum",
+    title: "Excellence",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
   }
