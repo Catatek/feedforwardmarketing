@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   align-items: center;
   margin: 0 auto;
   @media (max-width: 780px) {
-    flex-direction: column-reverse;
+    flex-direction: ${props => (props.primary ? "column-reverse" : "column")};
     align-items: center;
     justify-content: center;
   }
@@ -25,6 +25,8 @@ const StyledColumn = styled(Column)`
   @media (max-width: 780px) {
     width: 100%;
     align-items: center;
+    padding: 0;
+    margin: 0.75em 0;
   }
 `;
 
@@ -32,7 +34,7 @@ const StyledTextColumn = styled(Column)`
   margin: 1em 0;
   width: 70%;
   @media (max-width: 780px) {
-    width: 90%;
+    width: 95%;
     text-align: center;
     align-items: center;
   }
@@ -45,25 +47,15 @@ const Img = styled.img`
   }
 `;
 
-export default function Benefit({ title, description, img, bullets, type }) {
+export default function Benefit({ title, description, img, type }) {
   return (
-    <Wrapper>
+    <Wrapper primary={type === "primary"}>
       {type === "primary" && (
         <React.Fragment>
           <StyledColumn>
             <StyledTextColumn>
               <Text large>{title}</Text>
               <Text>{description}</Text>
-              <Column margin="0 0 1em 0">
-                {bullets &&
-                  bullets.map((key, index) => {
-                    return (
-                      <Text bullets key={index}>
-                        {key}
-                      </Text>
-                    );
-                  })}
-              </Column>
               <Button primary>Learn more</Button>
             </StyledTextColumn>
           </StyledColumn>
@@ -81,16 +73,6 @@ export default function Benefit({ title, description, img, bullets, type }) {
             <StyledTextColumn>
               <Text large>{title}</Text>
               <Text>{description}</Text>
-              <Column margin="0 0 1em 0">
-                {bullets &&
-                  bullets.map((key, index) => {
-                    return (
-                      <Text bullets key={index}>
-                        {key}
-                      </Text>
-                    );
-                  })}
-              </Column>
               <Button primary>Learn more</Button>
             </StyledTextColumn>
           </StyledColumn>

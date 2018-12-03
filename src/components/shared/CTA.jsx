@@ -19,26 +19,44 @@ const Image = styled.img`
   height: 354px;
   position: absolute;
   bottom: 0;
+  @media (max-width: 780px) {
+    width: 300px;
+    height: 265px;
+  }
 `;
 
 const Icon = styled.img`
   width: 146px;
   height: 40px;
   margin: 0 1em;
+  @media (max-width: 780px) {
+    width: 115px;
+    height: 31px;
+  }
+`;
+
+const StyledColumn = styled(Column)`
+  width: 50%;
+  text-align: center;
+  margin: 0 0 1em 0;
+  @media (max-width: 780px) {
+    width: 95%;
+    margin: 0 0 2em 0;
+  }
 `;
 
 export default function CTA() {
   return (
     <Wrapper>
-      <Column alignitems="center">
+      <Column alignitems="center" textalign="center">
         <Subtitle>Register your organization</Subtitle>
-        <Column width="50%" textalign="center" margin="0 0 1em 0">
+        <StyledColumn>
           <Text>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam,
           </Text>
-        </Column>
+        </StyledColumn>
         <Row>
           <Icon src={Apple} alt="" />
           <Icon src={Google} alt="" />

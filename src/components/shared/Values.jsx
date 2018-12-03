@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   grid-gap: 50px;
   height: 100%;
   margin: 3em auto;
-  grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-auto-rows: 325px;
 `;
 
@@ -28,16 +28,25 @@ const StyledBox = styled(Column)`
 const StyledColumn = styled(Column)`
   padding: 6em 0 4em 0;
   align-items: center;
+  margin: 0 auto;
+`;
+
+const StyledBoxColumn = styled(Column)`
+  width: 85%;
+  align-items: center;
+  @media (max-width: 780px) {
+    width: 95%;
+  }
 `;
 
 function Box({ icon, title, description }) {
   return (
     <StyledBox>
       <Icon className={icon} />
-      <Column width="85%" alignitems="center">
+      <StyledBoxColumn>
         <Text large>{title}</Text>
         <Text>{description}</Text>
-      </Column>
+      </StyledBoxColumn>
     </StyledBox>
   );
 }

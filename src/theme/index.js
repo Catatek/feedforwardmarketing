@@ -34,6 +34,10 @@ export const Text = styled.p`
   color: #a1aeb7;
   font-weight: 300;
   line-height: 2.2em;
+  @media (max-width: 500px) {
+    font-size: 16px;
+    line-height: 1.8em;
+  }
   ${props =>
     props.large &&
     css`
@@ -43,7 +47,7 @@ export const Text = styled.p`
       margin: 0;
       line-height: 1em;
       @media (max-width: 500px) {
-        font-size: 18px;
+        font-size: 20px;
         line-height: 1.4em;
       }
     `};
@@ -59,11 +63,17 @@ export const Text = styled.p`
       font-size: 16px;
       line-height: 1em;
       margin: 1em 0 0 0;
+      @media (max-width: 780px) {
+        margin: 0;
+      }
     `};
   ${props =>
     props.boxdesc &&
     css`
       font-size: 14px;
+      @media (max-width: 400px) {
+        display: none;
+      }
     `};
   ${props =>
     props.footer &&
@@ -95,7 +105,8 @@ export const StyledNavLink = styled(NavLink)`
   font-weight: 600;
   margin-right: 3em;
   @media (max-width: 1100px) {
-    font-size: 1.2em;
+    font-size: 14px;
+    margin: 0 0.5em;
   }
 `;
 

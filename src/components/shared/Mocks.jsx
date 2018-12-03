@@ -11,14 +11,29 @@ const Wrapper = styled.div`
   padding: 6em 0 4em 0;
 `;
 
+const Grid = styled.div`
+  width: 75%;
+  display: grid;
+  grid-gap: 45px;
+  margin: 3em auto 2em auto;
+  grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+  grid-auto-rows: 184px;
+  @media (max-width: 400px) {
+    grid-template-columns: repeat(2, 150px);
+    grid-auto-rows: 45px;
+    width: 95%;
+    grid-gap: 35px 10px;
+  }
+`;
+
 const StyledBox = styled.div`
-  width: 170px;
-  height: 184px;
+  width: 100%;
+  height: 100%;
   background: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1em 0;
+  padding: 1em 0.5em;
   text-align: center;
   margin: 0 1.5em;
   border-radius: 3px;
@@ -32,12 +47,20 @@ const StyledBox = styled.div`
   &:hover {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   }
+  @media (max-width: 400px) {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0.5em 0;
+  }
 `;
 
 const Icon = styled.i`
   font-size: 3em;
   transition: 750ms;
   color: ${props => (props.active ? "#00b2aa" : "#BFD1DA")};
+  @media (max-width: 400px) {
+    font-size: 1.75em;
+  }
 `;
 
 const boxes = [
@@ -100,10 +123,10 @@ export default class Mocks extends Component {
     const { selected } = this.state;
     return (
       <Wrapper>
-        <Column alignitems="center">
+        <Column alignitems="center" textalign="center">
           <Subtitle>Everything you need</Subtitle>
         </Column>
-        <Row justifycontent="center" alignitems="center" margin="3em 0 0 0">
+        <Grid>
           {boxes &&
             boxes.map((key, index) => {
               return (
@@ -118,7 +141,7 @@ export default class Mocks extends Component {
                 />
               );
             })}
-        </Row>
+        </Grid>
         <Row>
           {selected === "effective" && (
             <Benefit
