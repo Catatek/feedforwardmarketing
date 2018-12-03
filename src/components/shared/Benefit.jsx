@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   width: 90%;
   align-items: center;
   margin: 0 auto;
-  @media (max-width: 800px) {
+  @media (max-width: 780px) {
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
@@ -22,9 +22,8 @@ const StyledColumn = styled(Column)`
   align-items: center;
   background-color: inherit;
   padding: 2em 0;
-  @media (max-width: 800px) {
+  @media (max-width: 780px) {
     width: 100%;
-    padding: 4em 0;
     align-items: center;
   }
 `;
@@ -32,13 +31,18 @@ const StyledColumn = styled(Column)`
 const StyledTextColumn = styled(Column)`
   margin: 1em 0;
   width: 70%;
-  @media (max-width: 800px) {
+  @media (max-width: 780px) {
     width: 90%;
+    text-align: center;
+    align-items: center;
   }
 `;
 
 const Img = styled.img`
   width: 70%;
+  @media (max-width: 780px) {
+    width: 90%;
+  }
 `;
 
 export default function Benefit({ title, description, img, bullets, type }) {

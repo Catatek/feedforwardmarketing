@@ -7,6 +7,9 @@ export const Title = styled.h1`
   color: #3a485d;
   font-weight: 600;
   margin: 0.25em 0;
+  @media (max-width: 500px) {
+    font-size: 48px;
+  }
   ${props =>
     props.white &&
     css`
@@ -20,6 +23,9 @@ export const Subtitle = styled.h2`
   color: #3a485d;
   font-weight: 600;
   margin: 0;
+  @media (max-width: 500px) {
+    font-size: 38px;
+  }
 `;
 
 export const Text = styled.p`
@@ -36,6 +42,10 @@ export const Text = styled.p`
       font-weight: 600;
       margin: 0;
       line-height: 1em;
+      @media (max-width: 500px) {
+        font-size: 18px;
+        line-height: 1.4em;
+      }
     `};
   ${props =>
     props.index &&

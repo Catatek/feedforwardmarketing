@@ -13,8 +13,9 @@ const Wrapper = styled.div`
   align-items: center;
   bottom: 0;
   justify-content: center;
-  @media (max-width: 700px) {
+  @media (max-width: 780px) {
     height: 100%;
+    flex-direction: column;
   }
 `;
 
@@ -22,14 +23,24 @@ const StyledColumn = styled(Column)`
   width: 40%;
   margin: 0 2em;
   margin-top: 2em;
-  @media (max-width: 1200px) {
-    width: 90%;
-    margin: 5em 0;
+  @media (max-width: 780px) {
+    width: 95%;
+    margin: 2em 0;
+    align-items: center;
+    text-align: center;
   }
 `;
 
 const Img = styled.img`
   width: 100%;
+`;
+
+const StyledTextColumn = styled(Column)`
+  width: 90%;
+  @media (max-width: 780px) {
+    width: 95%;
+    align-items: center;
+  }
 `;
 
 export default function Splash({ type }) {
@@ -51,7 +62,7 @@ export default function Splash({ type }) {
               FeedForward, a teaching tool for medical education
             </Text>
             <Title>Effective, Efficient Evaluations</Title>
-            <div style={{ width: "90%" }}>
+            <StyledTextColumn>
               <Text header>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -59,7 +70,7 @@ export default function Splash({ type }) {
                 nisi ut aliquip ex ea commodo consequat.
               </Text>
               <Button primary>Get started</Button>
-            </div>
+            </StyledTextColumn>
           </StyledColumn>
         </React.Fragment>
       )}

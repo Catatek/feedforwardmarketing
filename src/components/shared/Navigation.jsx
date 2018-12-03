@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Button, Row, StyledNavLink } from "../../theme/index";
 import Logo from "../../assets/logo.svg";
+import Burger from "./Burger";
 
 const Wrapper = styled.div`
   height: 80px;
@@ -17,37 +18,45 @@ const Wrapper = styled.div`
 `;
 
 const Img = styled.img`
-  height: 85px;
+  width: 200px;
   margin-left: 1.5em;
 `;
 
-export default function Navigation() {
+export default function Navigation({ type, children, ...props }) {
+  const mobile = window.matchMedia("(max-width: 1100px)");
+
+  let handleChange = () => {};
+
+  mobile.addListener(handleChange());
   return (
     <Wrapper>
       <Img src={Logo} alt="FeedForward Logo" />
-      <Row alignitems="center">
-        <StyledNavLink
-          exact
-          to="/"
-          activeStyle={{
-            color: "#00b2aa"
-          }}
-        >
-          Home
-        </StyledNavLink>
-        <StyledNavLink
-          exact
-          to="/about"
-          activeStyle={{
-            color: "#00b2aa"
-          }}
-        >
-          About
-        </StyledNavLink>
-        <StyledNavLink to="/">Resources</StyledNavLink>
-        <StyledNavLink to="/">Contact</StyledNavLink>
-        <Button nav>Sign In</Button>
-      </Row>
+      {mobile.matches && <Burger />}
+      {!mobile.matches && (
+        <Row alignitems="center">
+          <StyledNavLink
+            exact
+            to="/"
+            activeStyle={{
+              color: "#00b2aa"
+            }}
+          >
+            Home
+          </StyledNavLink>
+          <StyledNavLink
+            exact
+            to="/about"
+            activeStyle={{
+              color: "#00b2aa"
+            }}
+          >
+            About
+          </StyledNavLink>
+          <StyledNavLink to="/">Resources</StyledNavLink>
+          <StyledNavLink to="/">Contact</StyledNavLink>
+          <Button nav>Sign In</Button>
+        </Row>
+      )}
     </Wrapper>
   );
 }
