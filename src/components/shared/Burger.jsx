@@ -35,8 +35,14 @@ function BurgerMenu({ close }) {
         <Link to="/">
           <StyledLi onClick={close}>Home</StyledLi>
         </Link>
-        <Link to="/events">
-          <StyledLi onClick={close}>Events</StyledLi>
+        <Link to="/about">
+          <StyledLi onClick={close}>About</StyledLi>
+        </Link>
+        <Link to="/">
+          <StyledLi onClick={close}>Resources</StyledLi>
+        </Link>
+        <Link to="/">
+          <StyledLi onClick={close}>Contact</StyledLi>
         </Link>
       </StyledUl>
     </div>
