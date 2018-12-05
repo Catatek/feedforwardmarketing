@@ -5,7 +5,7 @@ import { Column, Text, Button } from "../../theme/index";
 const Wrapper = styled.div`
   display: flex;
   height: 100%;
-  min-height: 500px;
+  min-height: 625px;
   width: 90%;
   align-items: center;
   margin: 0 auto;
@@ -13,6 +13,8 @@ const Wrapper = styled.div`
     flex-direction: ${props => (props.primary ? "column-reverse" : "column")};
     align-items: center;
     justify-content: center;
+    height: 100%;
+    min-height: 100%;
   }
 `;
 
@@ -41,13 +43,13 @@ const StyledTextColumn = styled(Column)`
 `;
 
 const Img = styled.img`
-  width: 70%;
+  width: ${props => props.width};
   @media (max-width: 780px) {
     width: 90%;
   }
 `;
 
-export default function Benefit({ title, description, img, type }) {
+export default function Benefit({ title, description, img, type, width }) {
   return (
     <Wrapper primary={type === "primary"}>
       {type === "primary" && (
@@ -60,14 +62,14 @@ export default function Benefit({ title, description, img, type }) {
             </StyledTextColumn>
           </StyledColumn>
           <StyledColumn>
-            <Img src={img} />
+            <Img width={width} src={img} />
           </StyledColumn>
         </React.Fragment>
       )}
       {type === "secondary" && (
         <React.Fragment>
           <StyledColumn>
-            <Img src={img} />
+            <Img width={width} src={img} />
           </StyledColumn>
           <StyledColumn>
             <StyledTextColumn>

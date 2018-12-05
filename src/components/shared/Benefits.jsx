@@ -16,12 +16,14 @@ export default function Benefits() {
         img={illustration1}
         type="primary"
         title="To Do List"
+        width="75%"
         description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       />
       <Benefit
         img={illustration2}
         type="secondary"
         title="To Do List"
+        width="75%"
         description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       />
     </Wrapper>

@@ -38,11 +38,13 @@ function BurgerMenu({ close }) {
         <Link to="/about">
           <StyledLi onClick={close}>About</StyledLi>
         </Link>
-        <Link to="/">
+        {/* <Link to="/">
           <StyledLi onClick={close}>Resources</StyledLi>
-        </Link>
-        <Link to="/">
-          <StyledLi onClick={close}>Contact</StyledLi>
+        </Link> */}
+        <Link to="/" className="drift-open-chat">
+          <StyledLi onClick={close} className="drift-open-chat">
+            Contact
+          </StyledLi>
         </Link>
       </StyledUl>
     </div>

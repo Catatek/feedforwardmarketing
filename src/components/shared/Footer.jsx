@@ -48,10 +48,10 @@ export default function Footer() {
           <StyledNavLink footer to="/">
             About
           </StyledNavLink>
-          <StyledNavLink footer to="/">
+          {/* <StyledNavLink footer to="/">
             Resources
-          </StyledNavLink>
-          <StyledNavLink footer to="/">
+          </StyledNavLink> */}
+          <StyledNavLink footer className="drift-open-chat" to="/">
             Contact
           </StyledNavLink>
         </Row>

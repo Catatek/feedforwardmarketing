@@ -15,6 +15,7 @@ const Wrapper = styled.div`
   top: 0px;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 100000;
 `;
 
 const Img = styled.img`
@@ -22,7 +23,7 @@ const Img = styled.img`
   margin-left: 1.5em;
 `;
 
-export default function Navigation({ type, children, ...props }) {
+export default function Navigation({ type, children }) {
   const mobile = window.matchMedia("(max-width: 1100px)");
 
   let handleChange = () => {};
@@ -52,8 +53,10 @@ export default function Navigation({ type, children, ...props }) {
           >
             About
           </StyledNavLink>
-          <StyledNavLink to="/">Resources</StyledNavLink>
-          <StyledNavLink to="/">Contact</StyledNavLink>
+          {/* <StyledNavLink to="/">Resources</StyledNavLink> */}
+          <StyledNavLink className="drift-open-chat" to="/">
+            Contact
+          </StyledNavLink>
           <Button nav>Sign In</Button>
         </Row>
       )}
