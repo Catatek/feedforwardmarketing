@@ -3,11 +3,11 @@ import styled from "styled-components";
 import { Column, Text, Subtitle } from "../../theme/index";
 
 const Wrapper = styled.div`
-  width: 90%;
+  width: 100%;
   display: grid;
-  grid-gap: 50px;
+  grid-gap: 25px;
   height: 100%;
-  margin: 3em auto;
+  margin: 2em auto;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-auto-rows: 325px;
 `;
@@ -29,6 +29,9 @@ const StyledColumn = styled(Column)`
   padding: 6em 0 4em 0;
   align-items: center;
   margin: 0 auto;
+  @media (max-width: 780px) {
+    padding: 3em 0 1.5em;
+  }
 `;
 
 const StyledBoxColumn = styled(Column)`

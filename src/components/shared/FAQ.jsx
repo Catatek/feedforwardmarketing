@@ -10,12 +10,12 @@ const Wrapper = styled.div`
   margin: 5em auto;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   grid-auto-rows: 220px;
-`;
-
-const Icon = styled.i`
-  font-size: 4em;
-  margin: 0.5em 0;
-  color: #00b2aa;
+  @media (max-width: 400px) {
+    grid-template-columns: 300px;
+    grid-auto-rows: 185px;
+    width: 95%;
+    grid-gap: 35px 10px;
+  }
 `;
 
 const StyledBox = styled(Column)`
@@ -30,6 +30,10 @@ const StyledBox = styled(Column)`
 const StyledColumn = styled(Column)`
   padding: 6em 0 4em 0;
   align-items: center;
+  @media (max-width: 780px) {
+    padding: 3em 0 1.5em;
+    text-align: center;
+  }
 `;
 
 const faq = [

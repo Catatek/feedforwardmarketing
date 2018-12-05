@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Column, Title, Text, Button } from "../../theme/index";
+import { Column, Title, Text, Button, Row } from "../../theme/index";
 import splashImg from "../../assets/splash.svg";
 
 const Wrapper = styled.div`
@@ -15,6 +15,7 @@ const Wrapper = styled.div`
   justify-content: center;
   @media (max-width: 780px) {
     height: 100%;
+    padding: 1em 0;
     flex-direction: column;
   }
 `;
@@ -23,9 +24,9 @@ const StyledColumn = styled(Column)`
   width: 40%;
   margin: 0 2em;
   margin-top: 2em;
+  text-align: ${props => props.about && "center"};
   @media (max-width: 780px) {
-    width: 95%;
-    margin: 2em 0;
+    width: 90%;
     align-items: center;
     text-align: center;
   }
@@ -40,6 +41,12 @@ const StyledTextColumn = styled(Column)`
   @media (max-width: 780px) {
     width: 95%;
     align-items: center;
+  }
+`;
+
+const StyledRow = styled(Row)`
+  @media (max-width: 500px) {
+    display: none;
   }
 `;
 
@@ -69,21 +76,23 @@ export default function Splash({ type }) {
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
                 nisi ut aliquip ex ea commodo consequat.
               </Text>
-              <Button primary>Get started</Button>
+              <StyledRow>
+                <Button primary>Get started</Button>
+              </StyledRow>
             </StyledTextColumn>
           </StyledColumn>
         </React.Fragment>
       )}
       {type === "about" && (
-        <Column alignitems="center" textalign="center" width="60%">
-          <Title white>Feed Forward was founded upon Accountability</Title>
+        <StyledColumn about={type === "about"}>
+          <Title white>Lorem Ipsum</Title>
           <Text white>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.
           </Text>
-        </Column>
+        </StyledColumn>
       )}
     </Wrapper>
   );
