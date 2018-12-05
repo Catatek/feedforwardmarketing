@@ -8,8 +8,11 @@ const Wrapper = styled.div`
   grid-gap: 50px;
   height: 100%;
   margin: 2em auto;
-  grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
-  grid-auto-rows: 475px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-auto-rows: 450px;
+  @media (max-width: 780px) {
+    grid-auto-rows: 425px;
+  }
 `;
 
 const StyledWho = styled(Column)`
