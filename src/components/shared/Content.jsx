@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Column, Text, Subtitle } from "../../theme/index";
 
 const Wrapper = styled.div`
-  min-height: 500px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -28,13 +27,12 @@ export default function Content() {
   return (
     <Wrapper>
       <StyledColumn>
-        <Subtitle>The future creators & leaders</Subtitle>
+        <Subtitle>Streamline medical evaluations</Subtitle>
         <Text>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Provide an understanding of exactly what's required by medical
+          students during clinical rotations, and allow them to instantly
+          request evaluations by their peers and supervisors. Anytime, anywhere,
+          with any task.
         </Text>
       </StyledColumn>
     </Wrapper>

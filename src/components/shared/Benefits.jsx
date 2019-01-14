@@ -17,14 +17,14 @@ export default function Benefits() {
         type="primary"
         title="To Do List"
         width="75%"
-        description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        description="Quickly view, understand, and take action of your rotation requirements as a medical student in the form of an easy-to-navigate to-do list."
       />
       <Benefit
         img={illustration2}
         type="secondary"
-        title="To Do List"
+        title="Request Feedback"
         width="75%"
-        description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        description="Request an evaluation with the click of a button, by selecting the supervisor in your department that you would like feedback from."
       />
     </Wrapper>
   );

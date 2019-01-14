@@ -14,37 +14,37 @@ const values = [
     icon: "fal fa-user-md",
     title: "Select your speciality",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
+      "Select your program, speciality, and year to find faculty in your department."
   },
   {
     icon: "fal fa-clipboard-list-check",
     title: "To-do list",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
+      "Quickly view clinical rotation requirements and what you're assigned for the day."
   },
   {
     icon: "fal fa-handshake-alt",
     title: "Collaborate",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
+      "Collaborate with supervisors by requesting instant evaluations during your rotation."
   },
   {
     icon: "fal fa-tachometer-alt",
     title: "Admin Dashboard",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
+      "Easily input rotation tasks for various sets of users and see how your organization is performing."
   },
   {
     icon: "fal fa-star",
     title: "Request reviews",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
+      "Select the supervisor you want to provide feedback on your task item with the click of a button."
   },
   {
     icon: "fal fa-bell",
     title: "Notifications",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
+      "Instantly view invaluable feedback from supervisors when they review your requests and submit."
   }
 ];
 
@@ -53,7 +53,7 @@ export default function Home() {
     <div>
       <Navigation />
       <Splash type="home" />
-      <Content />
+      {/* <Content /> */}
       <Benefits />
       <Mocks />
       <Values values={values} title={"Features"} />

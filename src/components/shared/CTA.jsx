@@ -52,9 +52,9 @@ export default function CTA() {
         <Subtitle>Register your organization</Subtitle>
         <StyledColumn>
           <Text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam,
+            Contact us today to register your organization and onboard your
+            students and faculty to have a better understanding of how all the
+            moving parts of medical education are working.
           </Text>
         </StyledColumn>
         <Row>

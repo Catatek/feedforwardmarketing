@@ -10,7 +10,6 @@ import Slider from "react-slick";
 const Wrapper = styled.div`
   width: 100%;
   height: 100%;
-  background: #f1f5f7;
   padding: 6em 0 4em 0;
 `;
 
@@ -26,7 +25,7 @@ const Grid = styled.div`
 const StyledBox = styled.div`
   width: 100%;
   height: 100%;
-  background: #fff;
+  background: #f1f5f7;
   display: flex;
   flex-direction: column;
   align-items: center;

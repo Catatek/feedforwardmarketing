@@ -5,10 +5,10 @@ import { Column, Text, Button } from "../../theme/index";
 const Wrapper = styled.div`
   display: flex;
   height: 100%;
-  min-height: 625px;
   width: 90%;
   align-items: center;
-  margin: 0 auto;
+  justify-content: center;
+  margin: 2em auto;
   @media (max-width: 780px) {
     flex-direction: ${props => (props.primary ? "column-reverse" : "column")};
     align-items: center;
@@ -19,7 +19,7 @@ const Wrapper = styled.div`
 `;
 
 const StyledColumn = styled(Column)`
-  width: 50vw;
+  width: 35%;
   justify-content: center;
   align-items: center;
   background-color: inherit;
@@ -34,7 +34,7 @@ const StyledColumn = styled(Column)`
 
 const StyledTextColumn = styled(Column)`
   margin: 1em 0;
-  width: 70%;
+  width: 90%;
   @media (max-width: 780px) {
     width: 95%;
     text-align: center;
@@ -58,7 +58,6 @@ export default function Benefit({ title, description, img, type, width }) {
             <StyledTextColumn>
               <Text large>{title}</Text>
               <Text>{description}</Text>
-              <Button primary>Learn more</Button>
             </StyledTextColumn>
           </StyledColumn>
           <StyledColumn>
@@ -75,7 +74,6 @@ export default function Benefit({ title, description, img, type, width }) {
             <StyledTextColumn>
               <Text large>{title}</Text>
               <Text>{description}</Text>
-              <Button primary>Learn more</Button>
             </StyledTextColumn>
           </StyledColumn>
         </React.Fragment>

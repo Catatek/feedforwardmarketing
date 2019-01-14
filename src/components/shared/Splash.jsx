@@ -54,9 +54,7 @@ export default function Splash({ type }) {
   return (
     <Wrapper
       background={
-        type === "home"
-          ? "#f2f5f7"
-          : "linear-gradient(to right, #59D2FE, #44E5E7)"
+        type === "home" ? "#fff" : "linear-gradient(to right, #59D2FE, #44E5E7)"
       }
     >
       {type === "home" && (
@@ -71,10 +69,10 @@ export default function Splash({ type }) {
             <Title>Effective, Efficient Evaluations</Title>
             <StyledTextColumn>
               <Text header>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                FeedForward creates a seamless workflow for medical students to
+                request on-demand evaluations from their supervisors. In turn,
+                this provides invaluable data metrics to organizations on how
+                their programs, students, and supervisors are performing.
               </Text>
               <StyledRow>
                 <Button primary>Get started</Button>
@@ -85,12 +83,11 @@ export default function Splash({ type }) {
       )}
       {type === "about" && (
         <StyledColumn about={type === "about"}>
-          <Title white>Lorem Ipsum</Title>
+          <Title white>About us</Title>
           <Text white>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            Founded by a collective of medical professionals and engineers,
+            FeedForward is rooted in providing value and solutions to medical
+            organizations.
           </Text>
         </StyledColumn>
       )}

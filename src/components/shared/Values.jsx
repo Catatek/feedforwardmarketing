@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   height: 100%;
   margin: 2em auto;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-auto-rows: 325px;
+  grid-auto-rows: 295px;
   @media (max-width: 780px) {
     width: 100%;
     grid-auto-rows: 275px;

@@ -31,9 +31,9 @@ export const Subtitle = styled.h2`
 export const Text = styled.p`
   font-family: "Ubuntu", sans-serif;
   font-size: 18px;
-  color: #a1aeb7;
+  color: #6f6f6f;
   font-weight: 300;
-  line-height: 2.2em;
+  line-height: 1.9em;
   @media (max-width: 500px) {
     font-size: 16px;
     line-height: 1.8em;
