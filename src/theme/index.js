@@ -59,10 +59,12 @@ export const Text = styled.p`
   ${props =>
     props.boxtitle &&
     css`
-      color: #505d68;
-      font-size: 16px;
+      color: ${props => (props.active ? "#00b2aa" : "#6f6f6f")};
+      font-size: 18px;
+      font-weight: 600;
       line-height: 1em;
-      margin: 1em 0 0 0;
+      margin: 0.75em 0 0 0;
+      transition: 500ms;
       @media (max-width: 780px) {
         margin: 0;
       }
@@ -70,7 +72,8 @@ export const Text = styled.p`
   ${props =>
     props.boxdesc &&
     css`
-      font-size: 14px;
+      font-size: 16px;
+      margin: 0;
       @media (max-width: 400px) {
         display: none;
       }
