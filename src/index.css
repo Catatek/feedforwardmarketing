@@ -19,6 +19,26 @@ a {
   text-decoration: none;
 }
 
+.mockImg {
+  animation: 1s 1 alternate slidein;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slidein {
+  0% {
+    margin-right: 50%;
+    opacity: 0.25;
+  }
+  80% {
+    margin-right: -10%;
+    opacity: 1;
+  }
+  100% {
+    margin-right: 0%;
+    opacity: 1;
+  }
+}
+
 /*BURGR ICON*/
 
 .burger-menu,

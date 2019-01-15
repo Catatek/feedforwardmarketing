@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import Benefit from "./Benefit";
+import Mock from "./Mock";
+import clinical from "../../assets/clinical.png";
+import request from "../../assets/request.png";
 import Browser from "../../assets/browser.png";
 import Home from "../../assets/Home.png";
 import Evaluator from "../../assets/Evaluator_Comp.png";
@@ -9,17 +12,16 @@ import Slider from "react-slick";
 
 const Wrapper = styled.div`
   width: 100%;
-  height: 100%;
-  padding: 6em 0 4em 0;
+  height: 660px;
+  padding: 1em 0;
 `;
 
 const Grid = styled.div`
   width: 75%;
   display: grid;
   grid-gap: 45px;
-  margin: 3em auto 2em auto;
-  grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
-  grid-auto-rows: 90px;
+  grid-template-columns: repeat(1, 300px);
+  grid-auto-rows: 100px;
 `;
 
 const StyledBox = styled.div`
@@ -28,10 +30,8 @@ const StyledBox = styled.div`
   background: #f1f5f7;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 1em 0.5em;
-  text-align: center;
-  margin: 0 1.5em;
+  padding: 1em 2em;
+  margin: 1.5em 0;
   border-radius: 3px;
   cursor: pointer;
   transition: 750ms;
@@ -45,57 +45,34 @@ const StyledBox = styled.div`
   }
 `;
 
-const Icon = styled.i`
-  font-size: 3em;
-  transition: 750ms;
-  color: ${props => (props.active ? "#00b2aa" : "#BFD1DA")};
+const StyledRow = styled(Row)`
+  justifycontent: center;
+  flex-direction: ${props => props.direction};
+  margin: 0 auto;
+  width: 70%;
 `;
 
-const boxes = [
-  {
-    id: "effective",
-    title: "Effective",
-
-    icon: "fal fa-bullseye-arrow"
-  },
-  // {
-  //   id: "efficient",
-  //   title: "Efficient",
-
-  //   icon: "fal fa-rabbit-fast"
-  // },
-  {
-    id: "evaluations",
-    title: "Evaluations",
-
-    icon: "fal fa-clipboard-list-check"
-  },
-  // {
-  //   id: "accountability",
-  //   title: "Accountability",
-
-  //   icon: "fal fa-fingerprint"
-  // },
-  {
-    id: "analytical",
-    title: "Analytical",
-
-    icon: "fal fa-chart-bar"
-  }
-];
+const Icon = styled.i`
+  font-size: 2em;
+  transition: 500ms;
+  color: ${props => (props.active ? "#00b2aa" : "#BFD1DA")};
+`;
 
 function Box({ icon, id, selected, title, description, handleClick }) {
   return (
     <StyledBox id={id} onClick={() => handleClick(id)}>
       <Icon className={icon} active={id === selected} />
-      <Text boxtitle>{title}</Text>
+      <Text boxtitle active={id === selected}>
+        {title}
+      </Text>
+      <Text boxdesc>{description}</Text>
     </StyledBox>
   );
 }
 
 export default class Mocks extends Component {
   state = {
-    selected: "effective"
+    selected: "clinical"
   };
 
   handleClick = id => {
@@ -108,6 +85,7 @@ export default class Mocks extends Component {
 
   render() {
     const { selected } = this.state;
+    const { values, type, title } = this.props;
     let settings = {
       dots: true,
       infinite: false,
@@ -118,10 +96,6 @@ export default class Mocks extends Component {
     const mobile = window.matchMedia("(max-width: 780px)");
     return (
       <Wrapper>
-        <Column alignitems="center" textalign="center">
-          <Subtitle>Everything you need</Subtitle>
-        </Column>
-
         {mobile.matches ? (
           <div
             style={{
@@ -134,7 +108,6 @@ export default class Mocks extends Component {
                 width="40%"
                 type="primary"
                 title="Effective"
-                description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
               />
 
               <Benefit
@@ -142,7 +115,6 @@ export default class Mocks extends Component {
                 width="40%"
                 type="primary"
                 title="Evaluations"
-                description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
               />
 
               <Benefit
@@ -150,72 +122,51 @@ export default class Mocks extends Component {
                 width="90%"
                 type="primary"
                 title="To Do List"
-                description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
               />
-              {/* <Benefit
-                img={Browser}
-                type="primary"
-                title="To Do List"
-                description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-              />
-
-              <Benefit
-                img={Browser}
-                type="primary"
-                title="To Do List"
-                description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-              /> */}
             </Slider>
           </div>
         ) : (
-          <React.Fragment>
-            <Grid>
-              {boxes &&
-                boxes.map((key, index) => {
-                  return (
-                    <Box
-                      key={index}
-                      id={key.id}
-                      title={key.title}
-                      icon={key.icon}
-                      handleClick={this.handleClick}
-                      selected={selected}
-                    />
-                  );
-                })}
-            </Grid>
-            <Row>
-              {selected === "effective" && (
-                <Benefit
-                  img={Home}
-                  width="40%"
-                  type="primary"
-                  title="Effective"
-                  description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-                />
-              )}
-
-              {selected === "evaluations" && (
-                <Benefit
-                  img={Evaluator}
-                  width="40%"
-                  type="primary"
-                  title="Evaluations"
-                  description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-                />
-              )}
-
-              {selected === "analytical" && (
-                <Benefit
-                  img={Browser}
-                  width="90%"
-                  type="primary"
-                  title="To Do List"
-                  description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-                />
-              )}
-            </Row>
-          </React.Fragment>
+          <StyledRow direction={type === "student" ? "row-reverse" : "row"}>
+            <Column width="50%">
+              <Subtitle>{title}</Subtitle>
+              <Grid>
+                {values &&
+                  values.map((key, index) => {
+                    return (
+                      <Box
+                        key={index}
+                        id={key.id}
+                        title={key.title}
+                        icon={key.icon}
+                        handleClick={this.handleClick}
+                        selected={selected}
+                        description={key.description}
+                      />
+                    );
+                  })}
+              </Grid>
+            </Column>
+            <Column width="50%">
+              <Row>
+                {selected === "clinical" && (
+                  <Mock img={clinical} height="500px" />
+                )}
+                {selected === "request" && (
+                  <Mock img={request} height="500px" />
+                )}
+                {selected === "review" && (
+                  <Mock img={Evaluator} height="500px" />
+                )}
+                {selected === "add" && <Mock img={Home} height="500px" />}
+                {selected === "accountable" && (
+                  <Mock img={Evaluator} height="500px" />
+                )}
+                {selected === "insight" && (
+                  <Mock img={Evaluator} height="500px" />
+                )}
+              </Row>
+            </Column>
+          </StyledRow>
         )}
       </Wrapper>
     );

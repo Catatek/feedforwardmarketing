@@ -48,6 +48,48 @@ const values = [
   }
 ];
 
+const student = [
+  {
+    id: "clinical",
+    title: "Understand your clinical tasks",
+    description: "when you show up for your rotation.",
+    icon: "fal fa-bullseye-arrow"
+  },
+  {
+    id: "request",
+    title: "Request on-demand reviews",
+    description: "by selecting your evaluator on the spot.",
+    icon: "fal fa-clipboard-list-check"
+  },
+  {
+    id: "review",
+    title: "Review invaluable feedback",
+    description: "and understand exactly how to improve.",
+    icon: "fal fa-chart-bar"
+  }
+];
+
+const organization = [
+  {
+    id: "add",
+    title: "Add clinical tasks",
+    description: "to any combination of student programs.",
+    icon: "fal fa-tasks"
+  },
+  {
+    id: "accountable",
+    title: "Hold faculty accountable",
+    description: "by viewing task reviews.",
+    icon: "fal fa-handshake-alt"
+  },
+  {
+    id: "insight",
+    title: "Gain invaluable insight",
+    description: "into your organization's health.",
+    icon: "fal fa-search"
+  }
+];
+
 export default function Home() {
   return (
     <div>
@@ -55,7 +97,12 @@ export default function Home() {
       <Splash type="home" />
       {/* <Content /> */}
       <Benefits />
-      <Mocks />
+      <Mocks title="Start everyday organized" values={student} type="student" />
+      <Mocks
+        title="Understand your organization"
+        values={organization}
+        type="organization"
+      />
       <Values values={values} title={"Features"} />
       <CTA />
       <Footer />
