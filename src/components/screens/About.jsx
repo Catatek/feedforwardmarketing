@@ -11,19 +11,19 @@ const values = [
     icon: "fal fa-heart",
     title: "Impact",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
+      "Our name stems from pushing you forth with your feed. We're rooted in belief that humans make change, and that's exactly what our mission is."
   },
   {
     icon: "fal fa-books",
     title: "Education",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
+      "Founded by academic doctors, we believe education is vital to the success of medical professionals. We aim to bridge the current task gap with our software."
   },
   {
     icon: "fal fa-award",
     title: "Excellence",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
+      "Excellence to us means clarity, understanding, and aligning your profession with your personal moral compass. We aim to connect these dots by providing clarity."
   }
 ];
 

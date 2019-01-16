@@ -38,24 +38,24 @@ const StyledColumn = styled(Column)`
 
 const faq = [
   {
-    title: "Lorem Ipsum",
+    title: "How do we start?",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
+      "Contact us today to learn how you can enroll your organization to start using FeedForward and begin to understand your organization's health better."
   },
   {
-    title: "Lorem Ipsum",
+    title: "How much does this cost?",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
+      "To learn of our pricing, contact us today so we can determine exactly how many usersyour organization has, and to what extent of support is required."
   },
   {
-    title: "Lorem Ipsum",
+    title: "Do you offer support?",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
+      "Yes! We have dedicated customer success specialists charged with guaranteeing that your organization is always covered for technical and customer support."
   },
   {
-    title: "Lorem Ipsum",
+    title: "What devices does your software support?",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
+      "Our mobile and web applicatios are built with the latest, cutting-edge, cross-platform technologies, so in simple-terms, whether your users have Android, or iOS, we have support for it."
   }
 ];
 

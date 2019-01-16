@@ -95,10 +95,15 @@ export default function Home() {
     <div>
       <Navigation />
       <Splash type="home" />
-      {/* <Content /> */}
       <Benefits />
-      <Mocks title="Start everyday organized" values={student} type="student" />
       <Mocks
+        selected="clinical"
+        title="Start everyday organized"
+        values={student}
+        type="student"
+      />
+      <Mocks
+        selected="add"
         title="Understand your organization"
         values={organization}
         type="organization"

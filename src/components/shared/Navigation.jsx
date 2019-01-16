@@ -18,6 +18,22 @@ const Wrapper = styled.div`
   z-index: 100000;
 `;
 
+export const A = styled.a`
+  font-size: 16px;
+  font-family: "Ubuntu", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  list-style: none;
+  color: #3a485d;
+  font-weight: 600;
+  margin-right: 3em;
+  cursor: pointer;
+  @media (max-width: 1100px) {
+    font-size: 14px;
+    margin: 0 0.5em;
+  }
+`;
+
 const Img = styled.img`
   width: 200px;
   margin-left: 1.5em;
@@ -53,10 +69,8 @@ export default function Navigation({ type, children }) {
           >
             About
           </StyledNavLink>
-          {/* <StyledNavLink to="/">Resources</StyledNavLink> */}
-          <StyledNavLink className="drift-open-chat" to="/">
-            Contact
-          </StyledNavLink>
+
+          <A className="drift-open-chat">Contact</A>
           <Button nav>Sign In</Button>
         </Row>
       )}

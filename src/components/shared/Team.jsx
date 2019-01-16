@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   height: 100%;
   margin: 2em auto;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-auto-rows: 450px;
+  grid-auto-rows: 480px;
   @media (max-width: 780px) {
     grid-auto-rows: 425px;
   }
@@ -58,18 +58,18 @@ export default function Team() {
       <Wrapper>
         <Who
           name="Dr. Karim Hanna"
-          title="Founder"
+          title="Founder | CEO"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
         />
         <Who
           name="Dr. Eddy Gonzalez"
-          title="Founder"
+          title="Founder | COO"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
         />
         <Who
           name="William Whatley"
           title="Technologist"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
+          description="William has experience developing applications, as well as leading engineering teams. He has mentored and even served as a judge for a public high school’s program in Florida, where he gave presentations and taught programming, usability, product ideation, UI/UX, and entrepreneurship"
         />
       </Wrapper>
     </StyledColumn>

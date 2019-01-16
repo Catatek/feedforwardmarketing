@@ -33,9 +33,6 @@ const StyledColumn = styled(Column)`
 
 const Img = styled.img`
   height: ${props => props.height};
-  @media (max-width: 780px) {
-    width: 90%;
-  }
 `;
 
 export default function Mock({ img, type, height }) {

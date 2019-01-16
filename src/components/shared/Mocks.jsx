@@ -1,14 +1,12 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import Benefit from "./Benefit";
 import Mock from "./Mock";
 import clinical from "../../assets/clinical.png";
 import request from "../../assets/request.png";
 import review from "../../assets/review.png";
-import dash from "../../assets/dash.png";
-import Browser from "../../assets/browser.png";
-import Home from "../../assets/Home.png";
-import Evaluator from "../../assets/Evaluator_Comp.png";
+import add from "../../assets/dash.webp";
+import accountable from "../../assets/accountable.webp";
+import insight from "../../assets/insight.webp";
 import { Subtitle, Text, Column, Row } from "../../theme/index";
 import Slider from "react-slick";
 
@@ -16,6 +14,10 @@ const Wrapper = styled.div`
   width: 100%;
   height: 660px;
   padding: 1em 0;
+  @media (max-width: 780px) {
+    height: 100%;
+    text-align: center;
+  }
 `;
 
 const Grid = styled.div`
@@ -74,8 +76,12 @@ function Box({ icon, id, selected, title, description, handleClick }) {
 
 export default class Mocks extends Component {
   state = {
-    selected: "clinical"
+    selected: ""
   };
+
+  componentDidMount() {
+    this.setState({ selected: this.props.selected });
+  }
 
   handleClick = id => {
     this.setState(() => {
@@ -101,31 +107,58 @@ export default class Mocks extends Component {
         {mobile.matches ? (
           <div
             style={{
-              margin: "1.5em 0"
+              margin: "1em 0"
             }}
           >
-            <Slider {...settings}>
-              <Benefit
-                img={Home}
-                width="40%"
-                type="primary"
-                title="Effective"
-              />
+            <Subtitle>{title}</Subtitle>
+            {type === "student" && (
+              <Slider {...settings}>
+                <Mock
+                  img={clinical}
+                  height="400px"
+                  type="primary"
+                  title="Effective"
+                />
 
-              <Benefit
-                img={Evaluator}
-                width="40%"
-                type="primary"
-                title="Evaluations"
-              />
+                <Mock
+                  img={request}
+                  height="400px"
+                  type="primary"
+                  title="Evaluations"
+                />
 
-              <Benefit
-                img={Browser}
-                width="90%"
-                type="primary"
-                title="To Do List"
-              />
-            </Slider>
+                <Mock
+                  img={review}
+                  height="400px"
+                  type="primary"
+                  title="To Do List"
+                />
+              </Slider>
+            )}
+            {type === "organization" && (
+              <Slider {...settings}>
+                <Mock
+                  img={add}
+                  height="200px"
+                  type="primary"
+                  title="Effective"
+                />
+
+                <Mock
+                  img={accountable}
+                  height="200px"
+                  type="primary"
+                  title="Evaluations"
+                />
+
+                <Mock
+                  img={insight}
+                  height="200px"
+                  type="primary"
+                  title="To Do List"
+                />
+              </Slider>
+            )}
           </div>
         ) : (
           <StyledRow direction={type === "student" ? "row-reverse" : "row"}>
@@ -157,11 +190,13 @@ export default class Mocks extends Component {
                   <Mock img={request} height="500px" />
                 )}
                 {selected === "review" && <Mock img={review} height="500px" />}
-                {selected === "add" && <Mock img={dash} height="500px" />}
+                {selected === "add" && <Mock img={add} height="500px" />}
                 {selected === "accountable" && (
-                  <Mock img={dash} height="500px" />
+                  <Mock img={accountable} height="500px" />
                 )}
-                {selected === "insight" && <Mock img={dash} height="500px" />}
+                {selected === "insight" && (
+                  <Mock img={insight} height="500px" />
+                )}
               </Row>
             </Column>
           </StyledRow>
