@@ -4,6 +4,8 @@ import Benefit from "./Benefit";
 import Mock from "./Mock";
 import clinical from "../../assets/clinical.png";
 import request from "../../assets/request.png";
+import review from "../../assets/review.png";
+import dash from "../../assets/dash.png";
 import Browser from "../../assets/browser.png";
 import Home from "../../assets/Home.png";
 import Evaluator from "../../assets/Evaluator_Comp.png";
@@ -154,16 +156,12 @@ export default class Mocks extends Component {
                 {selected === "request" && (
                   <Mock img={request} height="500px" />
                 )}
-                {selected === "review" && (
-                  <Mock img={Evaluator} height="500px" />
-                )}
-                {selected === "add" && <Mock img={Home} height="500px" />}
+                {selected === "review" && <Mock img={review} height="500px" />}
+                {selected === "add" && <Mock img={dash} height="500px" />}
                 {selected === "accountable" && (
-                  <Mock img={Evaluator} height="500px" />
+                  <Mock img={dash} height="500px" />
                 )}
-                {selected === "insight" && (
-                  <Mock img={Evaluator} height="500px" />
-                )}
+                {selected === "insight" && <Mock img={dash} height="500px" />}
               </Row>
             </Column>
           </StyledRow>
