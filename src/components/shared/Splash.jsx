@@ -26,7 +26,7 @@ const StyledColumn = styled(Column)`
   margin-top: 2em;
   text-align: ${props => props.about && "center"};
   @media (max-width: 780px) {
-    width: 90%;
+    width: 95%;
     align-items: center;
     text-align: center;
   }
@@ -34,6 +34,10 @@ const StyledColumn = styled(Column)`
 
 const Img = styled.img`
   width: 100%;
+  max-width: 800px;
+  @media (max-width: 1200px) {
+    width: 90%;
+  }
 `;
 
 const StyledTextColumn = styled(Column)`
@@ -75,7 +79,9 @@ export default function Splash({ type }) {
                 their programs, students, and supervisors are performing.
               </Text>
               <StyledRow>
-                <Button primary>Get started</Button>
+                <Button primary className="drift-open-chat">
+                  Get started
+                </Button>
               </StyledRow>
             </StyledTextColumn>
           </StyledColumn>

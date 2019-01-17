@@ -184,18 +184,16 @@ export default class Mocks extends Component {
             <Column width="50%">
               <Row>
                 {selected === "clinical" && (
-                  <Mock img={clinical} height="500px" />
+                  <Mock img={clinical} type="mobile" />
                 )}
-                {selected === "request" && (
-                  <Mock img={request} height="500px" />
-                )}
-                {selected === "review" && <Mock img={review} height="500px" />}
-                {selected === "add" && <Mock img={add} height="500px" />}
+                {selected === "request" && <Mock img={request} type="mobile" />}
+                {selected === "review" && <Mock img={review} type="mobile" />}
+                {selected === "add" && <Mock img={add} type="desktop" />}
                 {selected === "accountable" && (
-                  <Mock img={accountable} height="500px" />
+                  <Mock img={accountable} type="desktop" />
                 )}
                 {selected === "insight" && (
-                  <Mock img={insight} height="500px" />
+                  <Mock img={insight} type="desktop" />
                 )}
               </Row>
             </Column>

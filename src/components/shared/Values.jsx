@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Column, Text, Subtitle } from "../../theme/index";
 
 const Wrapper = styled.div`
-  width: 90%;
+  width: 80%;
   display: grid;
   grid-gap: 25px;
   height: 100%;

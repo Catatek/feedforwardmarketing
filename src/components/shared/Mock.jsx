@@ -19,6 +19,7 @@ const Wrapper = styled.div`
 `;
 
 const StyledColumn = styled(Column)`
+  width: 90%;
   justify-content: center;
   align-items: center;
   background-color: inherit;
@@ -31,15 +32,26 @@ const StyledColumn = styled(Column)`
   }
 `;
 
-const Img = styled.img`
-  height: ${props => props.height};
+const MobileImg = styled.img`
+  max-height: 500px;
+  @media (max-width: 1200px) {
+    height: 95%;
+  }
 `;
 
-export default function Mock({ img, type, height }) {
+const DesktopImg = styled.img`
+  max-height: 500px;
+  @media (max-width: 1200px) {
+    height: 95%;
+  }
+`;
+
+export default function Mock({ img, type }) {
   return (
     <Wrapper primary={type === "primary"}>
       <StyledColumn>
-        <Img className="mockImg" height={height} src={img} />
+        {type === "mobile" && <MobileImg className="mockImg" src={img} />}
+        {type === "desktop" && <DesktopImg className="mockImg" src={img} />}
       </StyledColumn>
     </Wrapper>
   );
