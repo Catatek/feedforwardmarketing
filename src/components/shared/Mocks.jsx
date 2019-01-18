@@ -1,18 +1,17 @@
 import React, { Component } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import Mock from "./Mock";
 import clinical from "../../assets/clinical.png";
 import request from "../../assets/request.png";
 import review from "../../assets/review.png";
-import add from "../../assets/dash.webp";
-import accountable from "../../assets/accountable.webp";
-import insight from "../../assets/insight.webp";
+import add from "../../assets/add.jpg";
+import accountable from "../../assets/accountable.jpg";
+import insight from "../../assets/insight.jpg";
 import { Subtitle, Text, Column, Row } from "../../theme/index";
 import Slider from "react-slick";
 
 const Wrapper = styled.div`
   width: 100%;
-  height: 660px;
   padding: 1em 0;
   @media (max-width: 780px) {
     height: 100%;
@@ -26,6 +25,17 @@ const Grid = styled.div`
   grid-gap: 45px;
   grid-template-columns: repeat(1, 300px);
   grid-auto-rows: 100px;
+  ${props =>
+    props.desktop &&
+    css`
+      @media (max-width: 1300px) {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-auto-rows: 150px;
+        width: 100%;
+        grid-gap: 50px;
+        margin: 1em auto;
+      }
+    `}
 `;
 
 const StyledBox = styled.div`
@@ -47,6 +57,17 @@ const StyledBox = styled.div`
   &:hover {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   }
+
+  ${props =>
+    props.desktop &&
+    css`
+      @media (max-width: 1300px) {
+        margin: 0.5em 1em;
+        align-items: center;
+        padding: 0.5em;
+        text-align: center;
+      }
+    `}
 `;
 
 const StyledRow = styled(Row)`
@@ -54,6 +75,15 @@ const StyledRow = styled(Row)`
   flex-direction: ${props => props.direction};
   margin: 0 auto;
   width: 70%;
+  ${props =>
+    props.desktop &&
+    css`
+      @media (max-width: 1300px) {
+        flex-direction: column-reverse;
+        width: 90%;
+        align-items: center;
+      }
+    `}
 `;
 
 const Icon = styled.i`
@@ -62,9 +92,22 @@ const Icon = styled.i`
   color: ${props => (props.active ? "#00b2aa" : "#BFD1DA")};
 `;
 
-function Box({ icon, id, selected, title, description, handleClick }) {
+const StyledColumn = styled(Column)`
+  width: 50%;
+  @media (max-width: 1300px) {
+    width: 95%;
+    align-items: center;
+    margin: 0 auto;
+  }
+`;
+
+function Box({ icon, id, selected, title, description, handleClick, type }) {
   return (
-    <StyledBox id={id} onClick={() => handleClick(id)}>
+    <StyledBox
+      id={id}
+      onClick={() => handleClick(id)}
+      desktop={type === "organization"}
+    >
       <Icon className={icon} active={id === selected} />
       <Text boxtitle active={id === selected}>
         {title}
@@ -113,58 +156,31 @@ export default class Mocks extends Component {
             <Subtitle>{title}</Subtitle>
             {type === "student" && (
               <Slider {...settings}>
-                <Mock
-                  img={clinical}
-                  height="400px"
-                  type="primary"
-                  title="Effective"
-                />
+                <Mock img={clinical} type="mobile" title="Effective" />
 
-                <Mock
-                  img={request}
-                  height="400px"
-                  type="primary"
-                  title="Evaluations"
-                />
+                <Mock img={request} type="mobile" title="Evaluations" />
 
-                <Mock
-                  img={review}
-                  height="400px"
-                  type="primary"
-                  title="To Do List"
-                />
+                <Mock img={review} type="mobile" title="To Do List" />
               </Slider>
             )}
             {type === "organization" && (
               <Slider {...settings}>
-                <Mock
-                  img={add}
-                  height="200px"
-                  type="primary"
-                  title="Effective"
-                />
+                <Mock img={add} type="desktop" title="Effective" />
 
-                <Mock
-                  img={accountable}
-                  height="200px"
-                  type="primary"
-                  title="Evaluations"
-                />
+                <Mock img={accountable} type="desktop" title="Evaluations" />
 
-                <Mock
-                  img={insight}
-                  height="200px"
-                  type="primary"
-                  title="To Do List"
-                />
+                <Mock img={insight} type="desktop" title="To Do List" />
               </Slider>
             )}
           </div>
         ) : (
-          <StyledRow direction={type === "student" ? "row-reverse" : "row"}>
-            <Column width="50%">
+          <StyledRow
+            direction={type === "student" ? "row-reverse" : "row"}
+            desktop={type === "organization"}
+          >
+            <StyledColumn>
               <Subtitle>{title}</Subtitle>
-              <Grid>
+              <Grid desktop={type === "organization"}>
                 {values &&
                   values.map((key, index) => {
                     return (
@@ -176,12 +192,13 @@ export default class Mocks extends Component {
                         handleClick={this.handleClick}
                         selected={selected}
                         description={key.description}
+                        type={type}
                       />
                     );
                   })}
               </Grid>
-            </Column>
-            <Column width="50%">
+            </StyledColumn>
+            <StyledColumn>
               <Row>
                 {selected === "clinical" && (
                   <Mock img={clinical} type="mobile" />
@@ -196,7 +213,7 @@ export default class Mocks extends Component {
                   <Mock img={insight} type="desktop" />
                 )}
               </Row>
-            </Column>
+            </StyledColumn>
           </StyledRow>
         )}
       </Wrapper>

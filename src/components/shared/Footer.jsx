@@ -36,6 +36,22 @@ const StyledRow = styled(Row)`
   }
 `;
 
+export const A = styled.a`
+  font-size: 16px;
+  font-family: "Ubuntu", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  list-style: none;
+  color: #fff;
+  font-weight: 600;
+  margin-right: 3em;
+  cursor: pointer;
+  @media (max-width: 1100px) {
+    font-size: 14px;
+    margin: 0 0.5em;
+  }
+`;
+
 export default function Footer() {
   return (
     <Wrapper>
@@ -45,15 +61,13 @@ export default function Footer() {
           <StyledNavLink footer to="/">
             Home
           </StyledNavLink>
-          <StyledNavLink footer to="/">
+          <StyledNavLink footer to="/about">
             About
           </StyledNavLink>
           {/* <StyledNavLink footer to="/">
             Resources
           </StyledNavLink> */}
-          <StyledNavLink footer className="drift-open-chat" to="/">
-            Contact
-          </StyledNavLink>
+          <A className="drift-open-chat">Contact</A>
         </Row>
       </StyledRow>
       <Row>
