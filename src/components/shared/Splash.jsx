@@ -73,10 +73,10 @@ export default function Splash({ type }) {
             <Title>Effective, Efficient Evaluations</Title>
             <StyledTextColumn>
               <Text header>
-                FeedForward creates a seamless workflow for medical students to
-                request on-demand evaluations from their supervisors. In turn,
-                this provides invaluable data metrics to organizations on how
-                their programs, students, and supervisors are performing.
+                FeedForward creates a seamless workflow for learners to request
+                on-demand evaluations from their supervisors. In turn, this
+                provides invaluable data metrics to organizations on how their
+                programs, students, and supervisors are performing.
               </Text>
               <StyledRow>
                 <Button primary className="drift-open-chat">

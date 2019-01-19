@@ -15,16 +15,16 @@ export default function Benefits() {
       <Benefit
         img={illustration1}
         type="primary"
-        title="To Do List"
+        title="To-do List"
         width="75%"
-        description="Quickly view, understand, and take action of your rotation requirements as a medical student in the form of an easy-to-navigate to-do list."
+        description="Quickly view, understand, and take action of your rotation requirements as a student in the form of an easy-to-navigate to-do list."
       />
       <Benefit
         img={illustration2}
         type="secondary"
         title="Request Feedback"
         width="75%"
-        description="Request an evaluation with the click of a button, by selecting the supervisor in your department that you would like feedback from."
+        description="Request an evaluation with the click of a button, by selecting the evaluator that you would like feedback from."
       />
     </Wrapper>
   );

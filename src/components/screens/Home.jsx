@@ -14,19 +14,19 @@ const values = [
     icon: "fal fa-user-md",
     title: "Select your speciality",
     description:
-      "Select your program, speciality, and year to find faculty in your department."
+      "Select your program, speciality/rotation, and year to find your evaluators."
   },
   {
     icon: "fal fa-clipboard-list-check",
     title: "To-do list",
     description:
-      "Quickly view clinical rotation requirements and what you're assigned for the day."
+      " Quickly view your clinical rotation requirements and what proficiencies are expected."
   },
   {
     icon: "fal fa-handshake-alt",
     title: "Collaborate",
     description:
-      "Collaborate with supervisors by requesting instant evaluations during your rotation."
+      "Collaborate with evaluators by requesting instant evaluations during your rotation."
   },
   {
     icon: "fal fa-tachometer-alt",
@@ -38,13 +38,13 @@ const values = [
     icon: "fal fa-star",
     title: "Request reviews",
     description:
-      "Select the supervisor you want to provide feedback on your task item with the click of a button."
+      "Select your evaluator for approval that you’ve completed a task. Start the feedforward process on your task with one click."
   },
   {
     icon: "fal fa-bell",
     title: "Notifications",
     description:
-      "Instantly view invaluable feedback from supervisors when they review your requests and submit."
+      "Instantly view invaluable feedback from evaluators when they review your requests and submit."
   }
 ];
 
@@ -104,7 +104,7 @@ export default function Home() {
       />
       <Mocks
         selected="add"
-        title="Understand your organization"
+        title="Monitor the success of your program"
         values={organization}
         type="organization"
       />

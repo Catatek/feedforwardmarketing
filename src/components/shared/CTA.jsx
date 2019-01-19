@@ -53,8 +53,8 @@ export default function CTA() {
         <StyledColumn>
           <Text>
             Contact us today to register your organization and onboard your
-            students and faculty to have a better understanding of how all the
-            moving parts of medical education are working.
+            students and faculty to have a better understanding of how well your
+            organization and students are doing.
           </Text>
         </StyledColumn>
         <Row>
