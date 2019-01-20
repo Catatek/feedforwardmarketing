@@ -71,9 +71,9 @@ export default function Navigation({ type, children }) {
           </StyledNavLink>
 
           <A className="drift-open-chat">Contact</A>
-          <Button nav>
-            <a href="http://app.feedforwardhealth.com">Sign In</a>
-          </Button>
+          <a href="http://app.feedforwardhealth.com">
+            <Button nav>Sign In</Button>
+          </a>
         </Row>
       )}
     </Wrapper>
