@@ -5,15 +5,11 @@ import { Column, Text, Subtitle } from "../../theme/index";
 const Wrapper = styled.div`
   width: 100%;
   display: flex;
-  background: #f1f5f7;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: ${props => props.height};
-  margin: 3em 0 4em 0;
   @media (max-width: 780px) {
     height: 100%;
-    padding: 2em 0;
     margin: 3em 0;
   }
 `;
@@ -27,12 +23,16 @@ const StyledColumn = styled(Column)`
   }
 `;
 
-export default function Content({ title, text, type }) {
+export default function Content() {
   return (
-    <Wrapper height={type === "about" ? "450px" : "350px"}>
+    <Wrapper>
       <StyledColumn>
-        <Subtitle>{title}</Subtitle>
-        <Text>{text}</Text>
+        <Subtitle>Why wait for feedback when you can Feedforward?</Subtitle>
+        <Text>
+          Students can take completing competencies into their own hands!
+          Learners can now take the lead on their iterative assessments and
+          growth.
+        </Text>
       </StyledColumn>
     </Wrapper>
   );

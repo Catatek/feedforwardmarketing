@@ -58,7 +58,7 @@ function Box({ icon, title, description }) {
   );
 }
 
-export default function Values({ values, title }) {
+export default function Values({ values, title, text }) {
   return (
     <StyledColumn>
       <Subtitle>{title}</Subtitle>
@@ -75,6 +75,7 @@ export default function Values({ values, title }) {
             );
           })}
       </Wrapper>
+      <Text>{text}</Text>
     </StyledColumn>
   );
 }

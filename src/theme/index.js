@@ -20,7 +20,7 @@ export const Title = styled.h1`
 export const Subtitle = styled.h2`
   font-family: "Ubuntu", sans-serif;
   font-size: 50px;
-  color: #3a485d;
+  color: ${props => props.color || "#3a485d"};
   font-weight: 600;
   margin: 0;
   @media (max-width: 500px) {
@@ -31,7 +31,7 @@ export const Subtitle = styled.h2`
 export const Text = styled.p`
   font-family: "Ubuntu", sans-serif;
   font-size: 18px;
-  color: #6f6f6f;
+  color: ${props => props.color || "#6f6f6f"};
   font-weight: 300;
   line-height: 1.9em;
   @media (max-width: 500px) {

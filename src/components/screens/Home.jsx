@@ -96,6 +96,11 @@ export default function Home() {
       <Navigation />
       <Splash type="home" />
       <Benefits />
+      <Content
+        type="home"
+        title="Why wait for feedback when you can Feedforward?"
+        text="Students can take completing competencies into their own hands! Learners can now take the lead on their iterative assessments and growth."
+      />
       <Mocks
         selected="clinical"
         title="Start everyday organized"

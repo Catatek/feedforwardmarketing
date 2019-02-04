@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   grid-auto-rows: 220px;
   @media (max-width: 400px) {
     grid-template-columns: 300px;
-    grid-auto-rows: 185px;
+
     width: 95%;
     grid-gap: 35px 10px;
   }
