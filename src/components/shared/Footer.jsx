@@ -72,7 +72,7 @@ export default function Footer() {
       </StyledRow>
       <Row>
         <Text footer>
-          2018 &copy; Feed Forward | Made with &hearts; in Tampa, FL
+          2019 &copy; Feed Forward | Made with &hearts; in Tampa, FL
         </Text>
       </Row>
     </Wrapper>

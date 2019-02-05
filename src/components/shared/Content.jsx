@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   justify-content: center;
   height: ${props => props.height};
   margin: 3em 0 4em 0;
-  padding: 1em;
+  padding: 1em 0;
   @media (max-width: 780px) {
     height: 100%;
     padding: 2em 0;
