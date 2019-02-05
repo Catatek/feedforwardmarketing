@@ -12,16 +12,15 @@ const Wrapper = styled.div`
   grid-auto-rows: 220px;
   @media (max-width: 400px) {
     grid-template-columns: 300px;
-
     width: 95%;
-    grid-gap: 35px 10px;
+    grid-gap: 60px;
   }
 `;
 
 const StyledBox = styled(Column)`
   width: 100%;
   height: 100%;
-  padding: 0.5em;
+  padding: 1em;
   border: 1px solid #c2d1d9;
   border-left: 10px solid #546887;
   border-radius: 3px;

@@ -1,18 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 import { Column, Text, Subtitle } from "../../theme/index";
+import will from "../../assets/will.png";
+import eddy from "../../assets/eddy.png";
+import karim from "../../assets/karim.png";
 
 const Wrapper = styled.div`
-  width: 100%;
+  width: 95%;
   display: grid;
-  grid-gap: 50px;
+  grid-gap: 25px;
   height: 100%;
   margin: 2em auto;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-auto-rows: 480px;
-  @media (max-width: 780px) {
-    grid-auto-rows: 425px;
-  }
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: auto;
 `;
 
 const StyledWho = styled(Column)`
@@ -30,18 +30,17 @@ const StyledColumn = styled(Column)`
   }
 `;
 
-const Avatar = styled.div`
-  width: 150px;
-  height: 150px;
+const Avatar = styled.img`
+  width: 200px;
+  height: 200px;
   border-radius: 100%;
-  background: #f6f6f6;
   margin: 2em 0;
 `;
 
-function Who({ avatar, name, title, description }) {
+function Who({ img, name, title, description }) {
   return (
     <StyledWho>
-      <Avatar />
+      <Avatar src={img} />
       <Column width="85%" alignitems="center">
         <Text large>{name}</Text>
         <Text title>{title}</Text>
@@ -59,17 +58,20 @@ export default function Team() {
         <Who
           name="Dr. Karim Hanna"
           title="Founder | CEO"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
+          img={karim}
+          description="Karim is from a family of teachers and his experiences stretch from test-prep, to teaching teachers internationally. Currently medical education is his passion and FeedForward pushes his own growth along with his learners in and out of clinical settings. "
         />
         <Who
           name="Dr. Eddy Gonzalez"
-          title="Founder | COO"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
+          title="Founder | CFO"
+          img={eddy}
+          description="With over 24 years of experience in academic teaching working with medical, nurse practitioner, pharmacy, physical therapy and undergraduate students, Dr. Gonzalez remains passionate about the about the importance of the education and and training of future healthcare providers."
         />
         <Who
           name="William Whatley"
           title="Technologist"
-          description="William has experience developing applications, as well as leading engineering teams. He has mentored and even served as a judge for a public high school’s program in Florida, where he gave presentations and taught programming, usability, product ideation, UI/UX, and entrepreneurship"
+          img={will}
+          description="William has experience developing applications, as well as leading engineering teams. He has mentored and even served as a judge for a public high school’s program in Florida, where he gave presentations and taught programming, usability, product ideation, UI/UX, and entrepreneurship."
         />
       </Wrapper>
     </StyledColumn>

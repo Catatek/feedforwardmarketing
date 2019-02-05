@@ -11,6 +11,7 @@ const Wrapper = styled.div`
   justify-content: center;
   height: ${props => props.height};
   margin: 3em 0 4em 0;
+  padding: 1em;
   @media (max-width: 780px) {
     height: 100%;
     padding: 2em 0;
@@ -27,12 +28,13 @@ const StyledColumn = styled(Column)`
   }
 `;
 
-export default function Content({ title, text, type }) {
+export default function Content({ title, text, text2, type }) {
   return (
     <Wrapper height={type === "about" ? "450px" : "350px"}>
       <StyledColumn>
         <Subtitle>{title}</Subtitle>
         <Text>{text}</Text>
+        {text2 && <Text>{text2}</Text>}
       </StyledColumn>
     </Wrapper>
   );
