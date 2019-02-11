@@ -12,7 +12,7 @@ const values = [
     icon: "fal fa-heart",
     title: "Impact",
     description:
-      "Our name stems from pushing you forth with your feed. We're rooted in belief that humans make change, and that's exactly what our mission is."
+      "Transitioning from 'feedback', teacher-lead progress we encourage proactive participation to give the learner control of their growth."
   },
   {
     icon: "fal fa-books",

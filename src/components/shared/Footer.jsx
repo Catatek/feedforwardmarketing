@@ -64,6 +64,9 @@ export default function Footer() {
           <StyledNavLink footer to="/about">
             About
           </StyledNavLink>
+          <StyledNavLink footer to="/privacy">
+            Privacy
+          </StyledNavLink>
           {/* <StyledNavLink footer to="/">
             Resources
           </StyledNavLink> */}
