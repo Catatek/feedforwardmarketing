@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Column, Text, Subtitle } from "../../theme/index";
-import will from "../../assets/will.png";
+import will from "../../assets/will.jpg";
 import eddy from "../../assets/eddy.png";
 import karim from "../../assets/karim.png";
 
@@ -65,7 +65,7 @@ export default function Team() {
           name="Dr. Eddy Gonzalez"
           title="Founder | CFO"
           img={eddy}
-          description="With over 24 years of experience in academic teaching working with medical, nurse practitioner, pharmacy, physical therapy and undergraduate students, Dr. Gonzalez remains passionate about the about the importance of the education and and training of future healthcare providers."
+          description="With over 24 years of experience in academic teaching working with medical, nurse practitioner, pharmacy, physical therapy and undergraduate learners, Dr. Gonzalez remains passionate about the about the importance of the education and and training of future healthcare providers."
         />
         <Who
           name="William Whatley"

@@ -52,9 +52,8 @@ export default function CTA() {
         <Subtitle>Register your organization</Subtitle>
         <StyledColumn>
           <Text>
-            Contact us today to register your organization and onboard your
-            students and faculty to have a better understanding of how well your
-            organization and students are doing.
+            Contact us today to better understand how well your organization and
+            learners are progressing.
           </Text>
         </StyledColumn>
         <Row>

@@ -76,7 +76,7 @@ export default function Splash({ type }) {
                 FeedForward creates a seamless workflow for learners to request
                 on-demand evaluations from their supervisors. In turn, this
                 provides invaluable data metrics to organizations on how their
-                programs, students, and supervisors are performing.
+                programs, learners, and supervisors are performing.
               </Text>
               <StyledRow>
                 <Button primary className="drift-open-chat">
@@ -91,9 +91,9 @@ export default function Splash({ type }) {
         <StyledColumn about={type === "about"}>
           <Title white>About us</Title>
           <Text white>
-            Founded by a collective of medical professionals and engineers,
-            FeedForward is rooted in providing value and solutions to medical
-            organizations.
+            Developed by a group of seasoned medical professionals and
+            engineers, FeedForward is rooted in adding value and solutions for
+            medical organizations.
           </Text>
         </StyledColumn>
       )}

@@ -12,15 +12,15 @@ import Footer from "../shared/Footer";
 const values = [
   {
     icon: "fal fa-user-md",
-    title: "Select your speciality",
+    title: "Select your Seciality",
     description:
-      "Select your program, speciality/rotation, and year to find your evaluators."
+      "To find your evaluators, select your program, specialty, rotation, and year."
   },
   {
     icon: "fal fa-clipboard-list-check",
-    title: "To-do list",
+    title: "To-do List",
     description:
-      " Quickly view your clinical rotation requirements and what proficiencies are expected."
+      "Quickly view your clinical rotation requirements and what proficiencies are expected."
   },
   {
     icon: "fal fa-handshake-alt",
@@ -36,9 +36,9 @@ const values = [
   },
   {
     icon: "fal fa-star",
-    title: "Request reviews",
+    title: "Request Reviews",
     description:
-      "Select your evaluator for approval that you’ve completed a task. Start the feedforward process on your task with one click."
+      "Once you have completed a task, with one simple click, select an evaluator for your approval."
   },
   {
     icon: "fal fa-bell",
@@ -98,8 +98,8 @@ export default function Home() {
       <Benefits />
       <Content
         type="home"
-        title="Why wait for feedback when you can Feedforward?"
-        text="Students can take completing competencies into their own hands! Learners can now take the lead on their iterative assessments and growth."
+        title="Why wait for feedback when you can FeedForward?"
+        text="Learners can take completing competencies into their own hands! Learners can now take the lead on their iterative assessments and growth."
       />
       <Mocks
         selected="clinical"

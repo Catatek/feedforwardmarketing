@@ -27,9 +27,9 @@ export default function Content() {
   return (
     <Wrapper>
       <StyledColumn>
-        <Subtitle>Why wait for feedback when you can Feedforward?</Subtitle>
+        <Subtitle>Why wait for feedback when you can FeedForward?</Subtitle>
         <Text>
-          Students can take completing competencies into their own hands!
+          Learners can take completing competencies into their own hands!
           Learners can now take the lead on their iterative assessments and
           growth.
         </Text>

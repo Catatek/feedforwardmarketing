@@ -17,14 +17,14 @@ export default function Benefits() {
         type="primary"
         title="To-do List"
         width="75%"
-        description="Quickly view, understand, and take action of your rotation requirements as a student in the form of an easy-to-navigate to-do list."
+        description="Quickly view, understand, and take action of your rotation requirements as a learner in the form of an easy-to-navigate to-do list."
       />
       <Benefit
         img={illustration2}
         type="secondary"
         title="Request Feedback"
         width="75%"
-        description="Request an evaluation with the click of a button, by selecting the evaluator that you would like feedback from."
+        description="With the click of a button, request an evaluation by selecting the evaluator that you would like feedback from."
       />
     </Wrapper>
   );
