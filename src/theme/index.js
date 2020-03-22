@@ -8,7 +8,7 @@ export const Title = styled.h1`
   font-weight: 600;
   margin: 0.25em 0;
   @media (max-width: 500px) {
-    font-size: 42px;
+    font-size: 44px;
   }
   ${props =>
     props.white &&
