@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Column, Text, Button } from "../../theme/index";
+import { Column, Text } from "../../theme/index";
 
 const Wrapper = styled.div`
   display: flex;
@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   justify-content: center;
   margin: 2em auto;
   @media (max-width: 780px) {
-    flex-direction: ${props => (props.primary ? "column-reverse" : "column")};
+    flex-direction: ${(props) => (props.primary ? "column-reverse" : "column")};
     align-items: center;
     justify-content: center;
     height: 100%;
@@ -43,7 +43,7 @@ const StyledTextColumn = styled(Column)`
 `;
 
 const Img = styled.img`
-  width: ${props => props.width};
+  width: ${(props) => props.width};
   @media (max-width: 780px) {
     width: 90%;
   }

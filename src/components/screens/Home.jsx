@@ -6,7 +6,6 @@ import Benefits from "../shared/Benefits";
 import Mocks from "../shared/Mocks";
 import Values from "../shared/Values";
 import CTA from "../shared/CTA";
-import Diagram from "../shared/Diagram";
 import Footer from "../shared/Footer";
 
 const values = [
